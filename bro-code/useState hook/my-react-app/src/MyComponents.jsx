@@ -15,7 +15,7 @@ function MyComponents () {
     }
 
     const updateEmployement = () =>  {
-        setIsEmployed(true);
+        setIsEmployed(!isEmployed);
     }
 
     return (
@@ -25,7 +25,8 @@ function MyComponents () {
                 <button onClick={updateName}>Set Name</button>
                 <p>Age: {age}</p>
                 <button onClick={updateAge}>Set Age</button>
-                <p>Employment: {isEmployed}</p>
+                <p>Employment: {isEmployed ? "Yes" : "No"}</p>
+                <button onClick={updateEmployement}>Change Employment</button>
             </div>
         </>
     );
